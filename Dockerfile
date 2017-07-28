@@ -6,7 +6,7 @@ ENV DATA_DIR /data/web
 ENV LOG_DIR /data/log/nginx
 RUN mkdir /data/log/nginx -p 
 RUN chown nginx.nginx -R /data/log/nginx
-ADD web /data/web
+ADD web /data
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
